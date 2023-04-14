@@ -14,10 +14,9 @@ For orders that have been delivered the average time is 3.89 days
 
 #### How many users have only made one purchase? Two purchases? Three+ purchases?
 
-TOTAL_ORDERS	users
-1	            25
-2	            28
-3+	            71
+1: 25
+2: 28
+3+:71
 
 #### On average, how many unique sessions do we have per hour?
 
