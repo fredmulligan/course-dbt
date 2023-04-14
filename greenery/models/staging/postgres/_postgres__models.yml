@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: stg_raw_tables
+    description: Settuping up the orders, order_items, users, addreses, promos, products, events 
