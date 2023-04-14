@@ -16,7 +16,7 @@ models:
   - name: products
     description: Includes details of the products sold on the platofrm 
 
-  -- name: promos
+  - name: promos
     description: Includes details about promotions
   
   - name: users
