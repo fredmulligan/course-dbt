@@ -1,0 +1,6 @@
+version: 2
+
+models:
+  - name: int_orders_per_customer
+    description: "Number of orders for each customer"
+    
