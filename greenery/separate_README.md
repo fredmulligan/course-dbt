@@ -38,3 +38,9 @@ order by 1
 with sessions as (select session_id, min(created_at) as created_at from events group by 1)
 select count(distinct session_id)/DATEDIFF( hour, min(created_at),max(created_at) ) 
 from sessions 
+
+with orders_per_user as (select user_id, count(*) as orders from stg_orders Group by 1)
+
+select count(case when orders>1 then 1 end)/count(*) as percent_return
+from orders_per_user
+

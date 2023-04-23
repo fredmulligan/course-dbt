@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: dim_users
+    description: "User dimensions"
+  - name: fact_orders
+    description: "Order facts"
+    columns:
+      - name: items
+        tests:
+          - not_null
+    
+  - name: dim_products
+    description: "Product dimensions"
+    

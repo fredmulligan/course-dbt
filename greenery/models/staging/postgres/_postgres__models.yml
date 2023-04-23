@@ -1,23 +1,45 @@
 version: 2
 
 models:
-  - name: addresses
+  - name: stg_addresses
     description:  Provides details about the address associated with each address_id
+    
   
-  - name: events
+  - name: stg_events
     description: page_views, package_shipped, add to cart and other events
+    columns:
+      - name: event_id
+        tests:
+          - not_null
+          - unique 
 
-  - name: order_items
+  - name: stg_order_items
     description: breaks down orders into their component products per order
+    
 
-  - name: orders
+  - name: stg_orders
     description: Includes details of the orders that have taken place
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique 
 
-  - name: products
+  - name: stg_products
     description: Includes details of the products sold on the platofrm 
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+          - unique 
 
-  - name: promos
+  - name: stg_promos
     description: Includes details about promotions
   
-  - name: users
+  - name: stg_users
     description: Includes details of the users of the platform
+    columns:
+      - name: user_id
+        tests:
+          - not_null
+          - unique 
