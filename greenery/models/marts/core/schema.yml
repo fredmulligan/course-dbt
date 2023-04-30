@@ -12,4 +12,16 @@ models:
     
   - name: dim_products
     description: "Product dimensions"
+
+  - name: int_events_per_session
+    description: >
+      This model contains the aggregated count of distinct event types for each session using the stg_events model as a source.
+    columns:
+      - name: session_id
+        description: The unique identifier for each session.
+        tests:
+          - unique
+          - not_null
+      - name: number_of_*
+        description: The count of each distinct event type within a session.
     

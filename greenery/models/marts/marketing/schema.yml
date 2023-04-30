@@ -1,6 +1,9 @@
 version: 2
 
 models:
-  - name: int_orders_per_customer
+  - name: fact_user_order
     description: "Number of orders for each customer"
+    
+  - name: dim_users_pii
+    description: "User data without unnecessary PII"
     

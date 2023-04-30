@@ -1,0 +1,17 @@
+version: 2
+
+macros:
+  - name: count_events_per
+    description: >
+      This macro counts the distinct values of a specified column for each group defined by another column.
+      It generates a dynamic SQL query with a separate column for each distinct value, prefixed by "number_of_".
+    arguments:
+      - name: table_name
+        type: String
+        description: The name of the table to query.
+      - name: groupby_column
+        type: String
+        description: The name of the column to group the results by.
+      - name: distinct_column
+        type: String
+        description: The name of the column for which to count distinct values.
