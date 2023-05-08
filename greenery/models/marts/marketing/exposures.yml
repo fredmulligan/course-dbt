@@ -1,0 +1,13 @@
+version: 2
+
+exposures:  
+  - name: Product Funnel Dashboard
+    description: >
+      Marketing Funnel
+    type: dashboard
+    maturity: high
+    owner:
+      name: Fred Mulligan
+      email: Fred@greenery.com
+    depends_on:
+      - ref('all_time_funnel')

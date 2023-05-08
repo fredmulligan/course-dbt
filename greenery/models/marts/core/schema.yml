@@ -1,6 +1,18 @@
 version: 2
 
 models:
+  - name: inventory_over_time
+    description: "This table flattens inventory levels over time."
+    columns:
+      - name: product_id
+        description: "The unique identifier for each product."
+        tests:
+          - not_null
+          - unique
+      - name: product_name
+        description: "The name of the product."
+        tests:
+          - not_null
   - name: dim_users
     description: "User dimensions"
   - name: fact_orders

@@ -6,4 +6,22 @@ models:
     
   - name: dim_users_pii
     description: "User data without unnecessary PII"
-    
+  
+  - name: all_time_funnel
+    description: >
+      This table calculates the number of page views, add to carts, checkouts, and their ratios in a session.
+    config:
+      materialized: table
+    columns:
+      - name: views
+        description: Total number of page views
+      - name: carts
+        description: Total number of add to carts
+      - name: checkouts
+        description: Total number of checkouts
+      - name: views_in_session
+        description: Ratio of page views in a session
+      - name: carts_in_session
+        description: Ratio of add to carts in a session
+      - name: checkouts_in_session
+        description: Ratio of checkouts in a session
